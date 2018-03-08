@@ -1,0 +1,58 @@
+@import "other/all";
+
+/*
+************************
+Section "Skills"
+************************
+*/
+#skills {
+    padding: 80px 0 0 0;
+    text-align: center;
+    
+    #skills__title {
+        @include section__title;
+    }
+    
+    .skills__items {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin: 60px auto;
+    
+        .skills__item {
+            width: 30%;
+            height: 100%;
+            color: $main-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition: all 0.5s linear;
+    
+            .skills-icon {
+                font-size: 60px;
+                color: $gold-color;
+                transition: all 0.5s linear;
+            }
+            
+            .skills-icon:not(.icon-bootstrap):not(.icon-jquery) {
+                padding-top: 10px;
+            }
+        }
+        
+        .skills__item:hover {
+            color: $gold-color;
+            transform: scale(1.1);
+        }
+    
+        .skills__item:hover .skills__item-name {
+            color: $gold-color;
+        }  
+    }
+}

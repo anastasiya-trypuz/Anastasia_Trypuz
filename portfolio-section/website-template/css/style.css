@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section > p {
+    margin-bottom: 70px;
+}
+
+section > h2 {
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 50%;
+    font-size: 1.8em;
+    color: #fff;
+    margin: 5px;
+    transition: all 0.4s;
+    text-align: center;
+}
+
+.social-icons a:hover {
+    background-color: #967F6D;
+    border: 1px solid #967F6D;
+}
+
+/* Menu */
+#main-nav {
+    background-color: transparent;
+    border: 0;
+    transition: all 0.4s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#main-nav.scrolled {
+    background-color: #1F0304;
+}
+
+#main-nav .navbar-header .navbar-brand,
+#main-nav .navbar-collapse .navbar-nav li a {
+    color: #FFFFFF;
+    transition: all 0.4s;
+}
+
+#main-nav .navbar-header .navbar-brand:hover,
+#main-nav .navbar-collapse .navbar-nav li a:hover {
+    color: #DC8D00;
+}
+
+#main-nav .navbar-header .navbar-brand {
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+#main-nav .navbar-collapse .navbar-nav li a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+/* Header */
+#main-header {
+    height: 100vh;
+    background: url('../img/header/header_bg.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+#main-header .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#main-header .inner h1 {
+    color: #1C0203;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    margin: 45px 0;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+#main-header .inner h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1C0203;
+    font-size: 2.5em;
+}
+
+#main-header .inner a {
+    background-color: #552A11;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    padding: 15px 30px;
+}
+
+#main-header .inner a:hover {
+    background-color: #FFFFFF;
+    color: #967f6d;
+}
+
+#services .fa {
+    width: 60px;
+    height: 60px;
+    background-color: #1F0304;
+    border-radius: 50%;
+    color: #FFFFFF;
+    line-height: 60px;
+    font-size: 2em;
+    border: 1px solid #1F0304;
+    transition: all 0.4s;
+}
+
+#services .fa:hover {
+    background-color: #FFFFFF;
+    color: #1F0304;
+    transform: rotate(360deg);
+}
+
+/* Portfolio */
+#portfolio {
+    background-color: #f7f7f7;
+}
+
+#portfolio .single-portfolio-item {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#portfolio .single-portfolio-item .portfolio-image-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+#portfolio .single-portfolio-item .portfolio-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+#portfolio .single-portfolio-item .portfolio-image:hover {
+    transform: scale(1.2);
+}
+
+#portfolio #portfolio-image-1 {
+    background-image: url('../img/portfolio/item1.jpg');
+}
+
+#portfolio #portfolio-image-2 {
+    background-image: url('../img/portfolio/item2.jpg');
+    background-position: bottom;
+}
+
+#portfolio #portfolio-image-3 {
+    background-image: url('../img/portfolio/item3.jpg');
+}
+
+#portfolio #portfolio-image-4 {
+    background-image: url('../img/portfolio/item4.jpg');
+    background-position: bottom;
+}
+
+#portfolio #portfolio-image-5 {
+    background-image: url('../img/portfolio/item5.jpg');
+}
+
+#portfolio #portfolio-image-6 {
+    background-image: url('../img/portfolio/item6.jpg');
+}
+
+#portfolio .single-portfolio-item .portfolio-image .portfolio-image-mask {
+    background-color: rgba(19, 18, 25, 0.85);
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    position: relative;
+}
+
+#portfolio .single-portfolio-item .portfolio-image:hover .portfolio-image-mask {
+    opacity: 1;
+}
+
+#portfolio .single-portfolio-item .portfolio-image .portfolio-image-mask .fas {
+    color: #ffffff;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Team */
+#team .row > p {
+    margin-top: 30px;
+}
+
+.img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#first-member {
+    background: url('../img/team/person1.jpg');
+    background-size: cover;
+}
+
+#second-member {
+    background: url('../img/team/person2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#third-member {
+    background: url('../img/team/person3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#contact {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/footer/world-map.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#contact h2,
+#contact p {
+    color: #ffffff;
+}
+
+#contact input:not([type="submit"]),
+#contact textarea {
+    width: 100%;
+    border: 0;
+}
+
+#contact input,
+#contact textarea {
+    text-transform: uppercase;
+    padding: 15px;
+    font-family: 'Playfair Display', serif;
+    border-radius: 5px;
+}
+
+#contact input:not([type="submit"]) {
+    margin-bottom: 30px;
+}
+
+#contact input[type="submit"] {
+    background-color: #1F0304;
+    border: 1px solid #1F0304;
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    padding: 15px 30px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #FFFFFF;
+    color: #1F0304;
+}
+
+#contact ::-webkit-input-placeholder {
+	color: #777;
+}
+#contact ::-moz-placeholder {
+	color: #777;
+}
+#contact :-ms-input-placeholder {
+	color: #777;
+}
+#contact :-moz-placeholder {
+	color: #777;
+}
+
+/* Footer */
+#main-footer .row > div {
+    line-height: 40px;
+}
+
+#main-footer #nav-footer ul {
+    list-style-type: none;
+}
+
+#main-footer #nav-footer ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#main-footer #nav-footer ul li a {
+    color: #333;
+    transition: all 0.4s;
+}
+
+#main-footer #nav-footer ul li a:hover {
+    color: #0ED8D6;
+    text-decoration: none;
+}

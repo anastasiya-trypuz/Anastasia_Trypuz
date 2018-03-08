@@ -1,0 +1,31 @@
+@media all and (max-width: 768px) {
+    #main-nav,
+    #main-nav.scrolled {
+        background-color: #1F0304;
+    }
+    
+    #main-nav .navbar-header .navbar-brand,
+    #main-nav .navbar-collapse .navbar-nav li a{
+        color: #fff;
+    }
+
+    #main-nav .icon-bar {
+        background-color: #fff;
+    }
+    
+    #main-nav .navbar-collapse .navbar-nav li {
+        text-align: right;
+    }
+
+    #services .row > div {
+        margin-bottom: 40px;
+    }
+    
+    #team .row > div {
+        margin-bottom: 40px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+}

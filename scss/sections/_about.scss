@@ -1,0 +1,60 @@
+@import "other/all";
+
+/*
+************************
+Section "About me"
+************************
+*/
+
+#about-me {
+    color: $main-color;
+    padding-top: 100px;
+    @include box--shadow;
+    text-align: center;
+    
+    #about-me__title {        
+        @include section__title;
+    }
+    
+    #about-me__description {
+        padding: 50px 0 120px 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+        
+        #about-me__text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: justify;
+            
+            .btn__cv {
+                @include btn__cv;
+                background: #b4b4b4;
+                font-weight: bold;
+                margin: 0 auto;
+                
+                &:hover {
+                    background: #010d23;
+                }
+            } 
+        }
+        
+        #about-me__photo {
+            width: 50%;
+            
+            #profile__photo {
+            background: url('../img/about/cv-photo.jpg');
+            background-size: cover;
+            height: 300px;
+            width: 230px;
+            border-radius: 2px;
+            margin: 0 auto;
+            }
+        }
+    }
+}

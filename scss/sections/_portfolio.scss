@@ -1,0 +1,163 @@
+@import "other/all";
+
+/*
+************************
+Section "Portfolio"
+************************
+*/
+
+#portfolio {
+    text-align: center;
+    padding: 40px 0 40px 0;
+    @include box--shadow;
+    box-shadow: 0px 0.5px 5px -1px rgba(1,13,35,0.75);
+
+    .portfolio__title {
+        @include section__title;
+        margin: 20px 0 80px 0;
+    }
+    
+    .portfolio__items {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 auto;
+        cursor: pointer;
+        
+        .portfolio__item {
+            width: 45%;
+            height: 200px;
+            margin: 0 30px 20px 0;
+            position: relative;
+            text-decoration: none;
+            background-position: center top;
+            box-shadow: 5px 5px 50px -10px rgba(1,13,35,.44);
+            transition: all 0.5s linear;
+        }
+            
+        #site-template {
+            background: url('../img/portfolio/website-template.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #pomodoro-app {
+            background: url('../img/portfolio/pomodoro-timer.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #todo-app {
+            background: url('../img/portfolio/todo-app.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #in-progress {
+            background: url('../img/portfolio/budget-app.jpg');
+            background-size: cover;
+            width: 45%;
+            height: 200px;
+            margin: 0 30px 20px 0;
+            position: relative;
+            text-decoration: none;
+            background-position: center top;
+            box-shadow: 5px 5px 50px -10px rgba(1,13,35,.44);
+            color: $gold-color;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: map-get($z-index, portfolio-item-exc);
+            
+            h3 {
+                z-index: map-get($z-index, portfolio-item-exc-txt);
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+        
+        #in-progress:after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(155, 155, 155, 0.75);
+        }
+        
+        .portfolio__item:after, 
+        .portfolio__item:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 0;
+            opacity: 0.9;
+            background: $main-color;
+            transition: all 0.4s ease-in-out;
+            z-index: map-get($z-index, portfolio-item);
+        }
+        
+        .portfolio__item:after {
+            top: 0;
+            left: 0;
+        }
+        
+        .portfolio__item:before {
+            bottom: 0;
+            right: 0;
+        }
+        
+        .portfolio__item:hover:after {
+            width: 100%;
+        }
+        
+        .portfolio__item:hover:before {
+            width: 100%;
+        }
+        
+        .portfolio__item-info {
+            color: $gold-color;
+            z-index: map-get($z-index, portfolio-item-info);
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.4s linear 0.2s;
+            
+            .portfolio__item-title {
+                font-weight: bold;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+            }
+            
+            .portfolio__icons {
+                .portfolio__icon {
+                    font-size: 28px;
+                    margin: 0 10px 0 10px;
+                    color: $gold-color;
+                    text-decoration: none;
+                    
+                    i {
+                        transition: all 0.3s linear;
+                        
+                        &:hover {
+                           transform: scale(1.1); 
+                        }
+                    }
+                }
+            } 
+        }
+        
+        .portfolio__item-info:hover {
+            opacity: 1;
+        }
+    }
+}

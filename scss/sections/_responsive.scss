@@ -1,0 +1,242 @@
+$small: 320px;
+$medium: 767px;
+$big: 1024px;
+
+// Less than 320px 
+@media all and (max-width: $small) {
+    header {
+        #header__title {
+            h1 {
+                font-size: 34px;
+            }
+            
+            .btn__cv {
+                width: 53%;
+            }
+        }
+    }
+    
+    #about-me {
+        #about-me__description {
+            #about-me__text {
+                width: 100%;
+                order: 2;
+                text-align: center;
+
+                .btn__cv {
+                    width: 55%;
+                    margin-top: 10px;
+                }
+            }
+
+            #about-me__photo {
+                width: 100%;
+                order: 1;
+                margin-bottom: 50px;
+                
+                #profile__photo {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #skills {
+        .skills__items {
+            .skills__item {
+                width: 100%;
+            }
+        }
+    }
+    
+    #portfolio {
+        .portfolio__items {
+            .portfolio__item {
+                width: 100%;
+                margin: 20px auto;
+                height: 100%;
+                padding: 15px;
+            }
+        }
+    }
+    
+    #contact {
+        .contact__left-section {
+            width: 100%;
+        }
+
+        .contact__right-section {
+            width: 100%;
+            
+            form {
+                width: 100%;
+                padding: 0 30px 0 30px;
+                
+                .btn__submit {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    
+    #btn__back-top {
+        right: 7px;
+    }
+}
+
+// More than 320px, less than 767px 
+@media all and (min-width: $small) and (max-width: $medium) {
+    
+    header {
+        #header__title {
+            .btn__cv {
+                width: 45%;
+            }
+        }  
+    }
+    
+    #about-me {
+        #about-me__description {
+            #about-me__text {
+                width: 100%;
+                order: 2;
+                
+                .btn__cv {
+                    width: 55%;
+                }
+            }
+
+            #about-me__photo {
+                width: 100%;
+                order: 1;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    
+    #skills {
+        .skills__items {
+            width: 80%;
+            
+            .skills__item {
+                width: 30%;
+            }
+        }
+    }
+    
+    #portfolio {
+        .portfolio__items {
+            .portfolio__item {
+                width: 100%;
+                margin: 20px auto;
+            }
+        }
+    }
+
+    #contact {
+        .contact__left-section {
+            width: 100%; 
+        }
+
+        .contact__right-section {
+            width: 100%;
+        }
+    }
+}
+
+
+// More than 767px, less than 1024px 
+@media all and (min-width: $medium) and (max-width: $big) {
+    
+    #about-me {
+        #about-me__description {
+            #about-me__text {
+                    width: 100%;
+                    order: 2;
+
+                .btn__cv {
+                    width: 20%;
+                }
+            }
+
+            #about-me__photo {
+                width: 100%;
+                order: 1;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    
+    #portfolio {
+        .portfolio__items {
+            width: 80%;
+
+            .portfolio__item {
+                width: 45%;
+                margin: 10px;
+                padding: 10px;
+                
+                .portfolio__item-info {
+                    .portfolio__item-title {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact {
+        .contact__left-section {
+            width: 40%;
+        }
+
+        .contact__right-section {
+            width: 60%;
+        }
+    }
+}
+
+// Responsive navigation menu for less than 767px 
+@media all and (max-width: $medium) {
+    #main-nav {
+        position: relative;
+        background: #B6B7B9;
+        height: 100%;
+        
+        .container {
+            button {
+                border: none;
+                .icon-bar {
+                    background: #fff;
+                }
+            }
+            
+            .navbar-collapse {
+                border: none;
+                clear: both;
+                background: transparent;
+                overflow: hidden;
+
+                ul {
+                    li {
+                        a::before {
+                            display: none;
+                        }
+                        
+                        .nav__icon {
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                
+                .navbar-right {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+

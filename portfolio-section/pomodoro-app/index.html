@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--    Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Oswald:200,400,500" rel="stylesheet">
+     
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    
+    <div id="main-block">
+       
+        <h1 id="main-title">Pomodoro Timer</h1>
+
+        <div id="timeSet-section">
+
+            <div class="timeSet-block">
+                <h2>Session Time:</h2>
+                <div class="timeSet">
+                    <button class="btn mth-btn" id="minus5Session">-</button>
+                    <h4 id="session-num" class=num>25</h4>
+                    <button class="btn mth-btn" id="add5Session">+</button>
+                </div>
+            </div>
+
+            <div class="timeSet-block">
+                <h2>Break Time:</h2>
+                <div class="timeSet">
+                    <button class="btn mth-btn" id="minus5Break">-</button>
+                    <h4 id="break-num" class=num>25</h4>
+                    <button class="btn mth-btn" id="add5Break">+</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="main-btns">
+            <a href="#" id="start" class="btn basic-btn">Start</a>
+            <a href="#" id="stop" class="btn basic-btn">Stop</a>
+            <a href="#" id="reset" class="btn basic-btn">Reset</a> 
+        </div>
+
+        <div id="main-timer">
+            <h1 id="timer-title">Timer:</h1>
+            <div class="timer-count">00:00</div>
+        </div>
+    </div>
+    
+<!--
+    <div id="info">
+        <h3>Instrukcja</h3>
+        <ol>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ut </li>
+            <li>Alias suscipit vitae tenetur eius dolorem consequuntur</li>
+            <li>Dolorem minima non veniam nostrum, vitae quaerat quos alias ducimus illo</li>
+            <li>Placeat aspernatur</li>
+            <li>Officia, nostrum. Vitae sequi, voluptatibus. Voluptatem sit</li>
+        </ol>
+    </div>
+-->
+    
+    <!--   JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!--    JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

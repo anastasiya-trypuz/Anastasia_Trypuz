@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #464D54;
+}
+
+#main-block {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #8B8B8B;
+    background: #fff;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#main-title {
+    color: #FF8F83;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+#timeSet-section {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.timeSet-block {
+    margin: 0 30px;
+}
+
+.timeSet {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.num {
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn {
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: #f1f1f1;
+    border-radius: 3px;
+    color: #8b8b8b;
+}
+
+.mth-btn {
+    width: 30px;
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+.basic-btn {
+    width: 100px;
+    display: inline-block;
+    margin: 20px 10px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+#start {
+    background: #a0e7a0;
+    color: #fff;
+}
+
+#stop {
+    background: #FF8F83;
+    color: #fff;
+}
+
+#timer-title {
+    margin: 30px 0;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+
+.timer-count {
+    color: #FF8F83;
+    font-size: 70px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+

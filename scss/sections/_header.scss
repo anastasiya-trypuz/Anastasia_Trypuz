@@ -1,0 +1,122 @@
+@import "other/all";
+
+/*
+************************
+Header 
+************************
+*/
+header {
+    background: linear-gradient(rgba(33, 32, 36, 0.1), rgba(33, 32, 36, 0.1)), url('../img/header/header-bg.jpeg');
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    @include box--shadow;
+    z-index: map-get($z-index, header);
+
+    
+    #header__title {
+        @include centering;
+        text-align: center;
+        letter-spacing: 2px;
+        
+        h1 {
+            font-size: 50px;
+        }
+        
+        h3 {
+            font-size: 18px;
+        }
+        
+        .title--intro {
+            animation-name: cd-bounce-right;
+            animation-duration: 1.5s;
+            text-transform: uppercase;
+            text-shadow: 0.5px 0.5px 14px #212024;
+        }
+
+        @keyframes cd-bounce-right {
+            0% {
+                opacity: .2;
+                transform: translateX(-200px);
+            }
+            60% {
+                opacity: .7;
+                transform: translateX(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .btn__cv {
+            @include btn__cv;
+            border: 0.5px solid #fff;
+            margin: 20px 10px 0 0;
+            font-weight: bold;
+            
+            &:hover {
+                background: rgba(1, 13, 35, 0.8);
+                border-color: $main-color;
+            }
+        }
+        
+        .btn--intro {
+            animation: btn-opacity 1.5s;
+        }
+
+        @keyframes btn-opacity {
+            0% {
+                opacity: 0;
+            }
+            60% {
+                opacity: .5;
+            }
+            80% {
+                opacity: .7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    
+    #arrow__down {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translate(-50%);
+        color: #fff;
+        font-size: 50px;
+        font-weight: 100;
+        
+        i.fa {
+            opacity: 0.5;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        i.fa:hover {
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        .arrow--animation {
+            animation: arrow-up 1.5s;
+        }
+        
+        @keyframes arrow-up {
+            0% {
+                transform: translateY(100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+    
+}
