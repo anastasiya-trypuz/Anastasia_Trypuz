@@ -314,11 +314,10 @@ Section "Portfolio"
     align-items: center;
     flex-wrap: wrap;
     width: 70%;
-    margin: 0 auto;
-    cursor: pointer; }
+    margin: 0 auto; }
     #portfolio .portfolio__items .portfolio__item {
       width: 45%;
-      height: 200px;
+      height: 250px;
       margin: 0 30px 20px 0;
       position: relative;
       text-decoration: none;
@@ -341,7 +340,7 @@ Section "Portfolio"
       background: url("../img/portfolio/budget-app.jpg");
       background-size: cover;
       width: 45%;
-      height: 200px;
+      height: 250px;
       margin: 0 30px 20px 0;
       position: relative;
       text-decoration: none;
@@ -395,23 +394,30 @@ Section "Portfolio"
       justify-content: center;
       align-items: center;
       height: 100%;
+      width: 100%;
       opacity: 0;
       transition: all 0.4s linear 0.2s; }
+      #portfolio .portfolio__items .portfolio__item-info:hover {
+        opacity: 1; }
       #portfolio .portfolio__items .portfolio__item-info .portfolio__item-title {
         font-weight: bold;
         margin-bottom: 18px;
         text-transform: uppercase; }
-      #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon {
-        font-size: 28px;
-        margin: 0 10px 0 10px;
-        color: #a0724e;
-        text-decoration: none; }
-        #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon i {
+      #portfolio .portfolio__items .portfolio__item-info .portfolio__icons {
+        margin-top: 10px; }
+        #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon {
+          display: inline-block;
+          font-size: 20px;
+          margin: 0 5px;
+          color: #a0724e;
+          text-decoration: none;
+          text-align: center;
+          padding: 5px;
           transition: all 0.3s linear; }
-          #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon i:hover {
-            transform: scale(1.1); }
-    #portfolio .portfolio__items .portfolio__item-info:hover {
-      opacity: 1; }
+          #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon:hover {
+            transform: scale(1.2); }
+          #portfolio .portfolio__items .portfolio__item-info .portfolio__icons .portfolio__icon i {
+            padding-right: 5px; }
 
 /*
 ************************

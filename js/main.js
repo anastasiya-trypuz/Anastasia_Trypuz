@@ -5,7 +5,7 @@ $(document).ready(function() {
     goTopButton();
     goTopFunction();
     smoothScroll();
-    addLink();
+//    addLink();
     formValidation();
 });
 
@@ -59,19 +59,19 @@ function goTopFunction() {
     });
 }
 
-function addLink() {
-    $('.portfolio__item').click(function() {
-        if ($(this).attr('id') == "pomodoro-app") {
-            window.open('portfolio-section/pomodoro-app/index.html', '_blank');   
-        }
-        else if ($(this).attr('id') == "site-template") {
-            window.open('portfolio-section/website-template/index.html', '_blank');   
-        }
-        else if ($(this).attr('id') == "todo-app") {
-            window.open('portfolio-section/todo-app/index.html', '_blank');   
-        } 
-    });
-}
+//function addLink() {
+//    $('.portfolio__item').click(function() {
+//        if ($(this).attr('id') == "pomodoro-app") {
+//            window.open('portfolio-section/pomodoro-app/index.html', '_blank'); 
+//        }
+//        else if ($(this).attr('id') == "site-template") {
+//            window.open('portfolio-section/website-template/index.html', '_blank');   
+//        }
+//        else if ($(this).attr('id') == "todo-app") {
+//            window.open('portfolio-section/todo-app/index.html', '_blank');   
+//        } 
+//    });
+//}
 
 function formValidation() {
     

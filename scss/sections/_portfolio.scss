@@ -24,11 +24,10 @@ Section "Portfolio"
         flex-wrap: wrap;
         width: 70%;
         margin: 0 auto;
-        cursor: pointer;
         
         .portfolio__item {
             width: 45%;
-            height: 200px;
+            height: 250px;
             margin: 0 30px 20px 0;
             position: relative;
             text-decoration: none;
@@ -59,7 +58,7 @@ Section "Portfolio"
             background: url('../img/portfolio/budget-app.jpg');
             background-size: cover;
             width: 45%;
-            height: 200px;
+            height: 250px;
             margin: 0 30px 20px 0;
             position: relative;
             text-decoration: none;
@@ -129,8 +128,13 @@ Section "Portfolio"
             justify-content: center;
             align-items: center;
             height: 100%;
+            width: 100%;
             opacity: 0;
             transition: all 0.4s linear 0.2s;
+            
+            &:hover {
+                opacity: 1;
+            }
             
             .portfolio__item-title {
                 font-weight: bold;
@@ -139,25 +143,27 @@ Section "Portfolio"
             }
             
             .portfolio__icons {
+                margin-top: 10px;
+                
                 .portfolio__icon {
-                    font-size: 28px;
-                    margin: 0 10px 0 10px;
+                    display: inline-block;
+                    font-size: 20px;
+                    margin: 0 5px;
                     color: $gold-color;
                     text-decoration: none;
+                    text-align: center;
+                    padding: 5px;
+                    transition: all 0.3s linear;
+                
+                    &:hover {
+                        transform: scale(1.2);
+                    }
                     
                     i {
-                        transition: all 0.3s linear;
-                        
-                        &:hover {
-                           transform: scale(1.1); 
-                        }
+                        padding-right: 5px;
                     }
                 }
             } 
-        }
-        
-        .portfolio__item-info:hover {
-            opacity: 1;
         }
     }
 }
