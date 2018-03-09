@@ -468,7 +468,6 @@ Section "Contact"
     #contact .contact__info .contact__mail {
       color: #010d23; }
   #contact .contact__icons {
-    color: #313d46;
     margin: 20px 0 10px 0; }
     #contact .contact__icons a {
       margin: 15px 10px;
@@ -514,15 +513,6 @@ footer {
     margin: 20px auto;
     height: 100%;
     padding: 15px; }
-  #contact .contact__left-section {
-    width: 100%; }
-  #contact .contact__right-section {
-    width: 100%; }
-    #contact .contact__right-section form {
-      width: 100%;
-      padding: 0 30px 0 30px; }
-      #contact .contact__right-section form .btn__submit {
-        margin: 0 auto; }
   #btn__back-top {
     right: 7px; } }
 
@@ -540,11 +530,7 @@ footer {
       width: 30%; }
   #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
     width: 100%;
-    margin: 20px auto; }
-  #contact .contact__left-section {
-    width: 100%; }
-  #contact .contact__right-section {
-    width: 100%; } }
+    margin: 20px auto; } }
 
 @media all and (min-width: 767px) and (max-width: 1024px) {
   #about-me #about-me__description #about-me__text {
@@ -567,11 +553,7 @@ footer {
     #portfolio .portfolio__items #in-progress {
       width: 45%;
       margin: 10px;
-      padding: 10px; }
-  #contact .contact__left-section {
-    width: 40%; }
-  #contact .contact__right-section {
-    width: 60%; } }
+      padding: 10px; } }
 
 @media all and (max-width: 767px) {
   #main-nav {
@@ -607,4 +589,6 @@ footer {
     width: 100%; }
   #portfolio .portfolio__items .portfolio__item-info {
     opacity: 1;
-    padding: 10px; } }
+    padding: 10px; }
+  #contact .contact__icons a {
+    color: #fff; } }
