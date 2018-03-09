@@ -8,8 +8,6 @@ Section "Contact"
 
 #contact {
     color: $main-color;
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -17,134 +15,60 @@ Section "Contact"
     background: url("../img/contact/contact-bg.jpeg");
     background-size: cover;
     background-position: center;
-    
-    .contact__left-section {
-        width: 50%;
+    text-align: center;
         
-        .contact__title {
-            @include section__title;
-            color: $light-color;
-            text-align: center;
-            padding: 20px 0 20px 0;
-        }
-
-        .contact__info {
-            margin: 0 auto;
-            position: relative;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            
-            .contact__icon {
-                color: $light-color;
-                border: 1px solid $light-color;
-                height: 35px;
-                width: 35px;
-                border-radius: 50%;
-                text-align: center;
-                font-size: 18px;
-                line-height: 35px;
-                margin: 15px auto 0 auto;
-            }
-            
-            .contact__text {
-                margin: 0;
-                text-decoration: none;
-            }
-            
-            .contact__mail {
-                color: $main-color;
-            }
-        }
-        
-        .contact__icons {
-            text-align: center;
-            color: $light-color;
-            margin-top: 10px;  
-
-            a {
-                margin: 15px 10px;
-                font-size: 28px;
-                display: inline-block;
-                transition: all 0.2s linear;
-                text-align: center;
-                color: $light-color;
-
-                &:hover {
-                    transform: scale(1.2);
-                    cursor: pointer;
-                }
-            }
-        }
+    .contact__title {
+        @include section__title;
+        color: $light-color;
+        padding: 20px 0 20px 0;
     }
-    
-    .contact__right-section {
+
+    .contact__info {
+        margin: 0 auto;
+        position: relative;
         width: 50%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        padding-bottom: 30px;
 
-        form {
-            width: 65%;
-            margin-top: 20px;
-            overflow: hidden;
+        .contact__icon {
+            color: $light-color;
+            border: 1px solid $light-color;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 18px;
+            line-height: 35px;
+            margin: 15px auto 10px auto;
+        }
 
-            input {
-                width: 100%;
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid $light-color;
-                color: $light-color;
-                margin: 10px 0 20px 0;
-                padding-left: 5px;
-            }
+        .contact__text {
+            margin: 0;
+            text-decoration: none;
+        }
 
-            textarea {
-                width: 100%;
-                height: 200px;
-                background-color: transparent;
-                color: $light-color;
-                background: linear-gradient(to bottom, rgba(49, 61,70,0.2), rgba(49,61,70,0.2));
-                padding: 15px 0 0 5px;
-                border: none;
-                margin-top: 10px;
-            }
+        .contact__mail {
+            color: $main-color;
+        }
+    }
 
-            .btn__submit {
-                background-color: transparent;
-                border: 0.5px solid #fff;
-                color: #fff;
-                text-transform: uppercase;
-                margin-top: 25px;
-                height: 40px;
-                width: 140px;
-                letter-spacing: 1px;
-                font-size: 15px;
-                transition: all 0.3s linear;
-                float: right;
-                font-weight: bold;
-            }
+    .contact__icons {
+        color: $light-color;
+        margin: 20px 0 10px 0;  
 
-            .btn__submit:hover {
-                background-color: rgb(49, 61, 70);
-                border-color: rgba(49,61,70,0.6);
-            }
-            
-            input:focus::placeholder, textarea:focus::placeholder {
-                color: transparent;
-            }
+        a {
+            margin: 15px 10px;
+            font-size: 28px;
+            display: inline-block;
+            transition: all 0.2s linear;
+            text-align: center;
+            color: $light-color;
 
-            input:focus, textarea:focus {
-                outline: none;
-            }
-
-            input::placeholder, textarea::placeholder {
-                color:$light-color;
-                font-size: 13px;
-                letter-spacing: 1px;
+            &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
             }
         }
     }
