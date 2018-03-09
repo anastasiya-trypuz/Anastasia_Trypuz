@@ -111,11 +111,11 @@ Section "Portfolio"
             right: 0;
         }
         
-        .portfolio__item:hover:after {
+        .portfolio__item:hover:after, .portfolio__item:active:after {
             width: 100%;
         }
         
-        .portfolio__item:hover:before {
+        .portfolio__item:hover:before, .portfolio__item:active:before {
             width: 100%;
         }
         

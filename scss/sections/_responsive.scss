@@ -1,17 +1,13 @@
-$small: 320px;
+$small: 350px;
 $medium: 767px;
 $big: 1024px;
 
-// Less than 320px 
-@media all and (max-width: $small) {
+// Less than 350px 
+@media screen and (max-width: $small) {
     header {
         #header__title {
             h1 {
-                font-size: 34px;
-            }
-            
-            .btn__cv {
-                width: 53%;
+                font-size: 30px;
             }
         }
     }
@@ -24,7 +20,6 @@ $big: 1024px;
                 text-align: center;
 
                 .btn__cv {
-                    width: 55%;
                     margin-top: 10px;
                 }
             }
@@ -51,7 +46,7 @@ $big: 1024px;
     
     #portfolio {
         .portfolio__items {
-            .portfolio__item {
+            .portfolio__item, #in-progress {
                 width: 100%;
                 margin: 20px auto;
                 height: 100%;
@@ -87,23 +82,11 @@ $big: 1024px;
 // More than 320px, less than 767px 
 @media all and (min-width: $small) and (max-width: $medium) {
     
-    header {
-        #header__title {
-            .btn__cv {
-                width: 45%;
-            }
-        }  
-    }
-    
     #about-me {
         #about-me__description {
             #about-me__text {
                 width: 100%;
                 order: 2;
-                
-                .btn__cv {
-                    width: 55%;
-                }
             }
 
             #about-me__photo {
@@ -126,7 +109,7 @@ $big: 1024px;
     
     #portfolio {
         .portfolio__items {
-            .portfolio__item {
+            .portfolio__item, #in-progress {
                 width: 100%;
                 margin: 20px auto;
             }
@@ -153,9 +136,8 @@ $big: 1024px;
             #about-me__text {
                     width: 100%;
                     order: 2;
-
                 .btn__cv {
-                    width: 20%;
+                    width: 30%;
                 }
             }
 
@@ -181,6 +163,12 @@ $big: 1024px;
                         font-size: 16px;
                     }
                 }
+            }
+            
+            #in-progress {
+                width: 45%;
+                margin: 10px;
+                padding: 10px
             }
         }
     }
@@ -235,6 +223,36 @@ $big: 1024px;
                     display: flex;
                     justify-content: center;
                 }
+            }
+        }
+    }
+    
+    #portfolio {
+        .portfolio__items {
+            .portfolio__item:after,
+            .portfolio__item:before {
+                width: 100%;
+            }
+            
+            .portfolio__item-info {
+                opacity: 1;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $big) {
+    #portfolio {
+        .portfolio__items {
+            .portfolio__item:after,
+            .portfolio__item:before {
+                width: 100%;
+            }
+            
+            .portfolio__item-info {
+                opacity: 1;
+                padding: 10px;
             }
         }
     }

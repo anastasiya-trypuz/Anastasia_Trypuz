@@ -11,7 +11,8 @@ html, body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   box-sizing: border-box;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 /*
 ************************
@@ -63,7 +64,8 @@ Navigation
     margin-top: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.5s linear; }
+    transition: all 0.5s linear;
+    font-weight: bold; }
     #main-nav .container ul li a:hover {
       transform: scale(1.1); }
   #main-nav .container ul li .nav__icon {
@@ -100,26 +102,26 @@ header {
   background: linear-gradient(rgba(33, 32, 36, 0.1), rgba(33, 32, 36, 0.1)), url("../img/header/header-bg.jpeg");
   background-attachment: fixed;
   height: 100vh;
+  max-width: 100%;
   background-position: center;
   background-size: cover;
-  padding: 0;
-  margin: 0;
   position: relative;
   box-shadow: 1px 1px 3px #838383;
   z-index: 9; }
   header #header__title {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    left: 0;
+    right: 0;
     text-align: center;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%); }
     header #header__title h1 {
       font-size: 50px; }
     header #header__title h3 {
       font-size: 18px; }
     header #header__title .title--intro {
-      animation-name: cd-bounce-right;
       animation-duration: 1.5s;
       text-transform: uppercase;
       text-shadow: 0.5px 0.5px 14px #212024; }
@@ -137,7 +139,7 @@ header {
     header #header__title .btn__cv {
       display: inline-block;
       height: 40px;
-      width: 27%;
+      padding: 0 15px;
       font-size: 15px;
       text-transform: uppercase;
       text-align: center;
@@ -221,7 +223,7 @@ Section "About me"
       #about-me #about-me__description #about-me__text .btn__cv {
         display: inline-block;
         height: 40px;
-        width: 27%;
+        padding: 0 15px;
         font-size: 15px;
         text-transform: uppercase;
         text-align: center;
@@ -381,9 +383,9 @@ Section "Portfolio"
     #portfolio .portfolio__items .portfolio__item:before {
       bottom: 0;
       right: 0; }
-    #portfolio .portfolio__items .portfolio__item:hover:after {
+    #portfolio .portfolio__items .portfolio__item:hover:after, #portfolio .portfolio__items .portfolio__item:active:after {
       width: 100%; }
-    #portfolio .portfolio__items .portfolio__item:hover:before {
+    #portfolio .portfolio__items .portfolio__item:hover:before, #portfolio .portfolio__items .portfolio__item:active:before {
       width: 100%; }
     #portfolio .portfolio__items .portfolio__item-info {
       color: #a0724e;
@@ -465,7 +467,8 @@ Section "Contact"
         line-height: 35px;
         margin: 15px auto 0 auto; }
       #contact .contact__left-section .contact__info .contact__text {
-        margin: 0; }
+        margin: 0;
+        text-decoration: none; }
       #contact .contact__left-section .contact__info .contact__mail {
         color: #010d23; }
     #contact .contact__left-section .contact__icons {
@@ -533,12 +536,6 @@ Section "Contact"
         color: #313d46;
         font-size: 13px;
         letter-spacing: 1px; }
-      #contact .contact__right-section form .error_message {
-        font-size: 10px;
-        color: #ff6961;
-        position: absolute;
-        top: 0;
-        left: 0; }
 
 /*
 ************************
@@ -551,17 +548,14 @@ footer {
   padding: 10px;
   font-size: 13px; }
 
-@media all and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   header #header__title h1 {
-    font-size: 34px; }
-  header #header__title .btn__cv {
-    width: 53%; }
+    font-size: 30px; }
   #about-me #about-me__description #about-me__text {
     width: 100%;
     order: 2;
     text-align: center; }
     #about-me #about-me__description #about-me__text .btn__cv {
-      width: 55%;
       margin-top: 10px; }
   #about-me #about-me__description #about-me__photo {
     width: 100%;
@@ -571,7 +565,7 @@ footer {
       width: 100%; }
   #skills .skills__items .skills__item {
     width: 100%; }
-  #portfolio .portfolio__items .portfolio__item {
+  #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
     width: 100%;
     margin: 20px auto;
     height: 100%;
@@ -588,14 +582,10 @@ footer {
   #btn__back-top {
     right: 7px; } }
 
-@media all and (min-width: 320px) and (max-width: 767px) {
-  header #header__title .btn__cv {
-    width: 45%; }
+@media all and (min-width: 350px) and (max-width: 767px) {
   #about-me #about-me__description #about-me__text {
     width: 100%;
     order: 2; }
-    #about-me #about-me__description #about-me__text .btn__cv {
-      width: 55%; }
   #about-me #about-me__description #about-me__photo {
     width: 100%;
     order: 1;
@@ -604,7 +594,7 @@ footer {
     width: 80%; }
     #skills .skills__items .skills__item {
       width: 30%; }
-  #portfolio .portfolio__items .portfolio__item {
+  #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
     width: 100%;
     margin: 20px auto; }
   #contact .contact__left-section {
@@ -617,7 +607,7 @@ footer {
     width: 100%;
     order: 2; }
     #about-me #about-me__description #about-me__text .btn__cv {
-      width: 20%; }
+      width: 30%; }
   #about-me #about-me__description #about-me__photo {
     width: 100%;
     order: 1;
@@ -630,6 +620,10 @@ footer {
       padding: 10px; }
       #portfolio .portfolio__items .portfolio__item .portfolio__item-info .portfolio__item-title {
         font-size: 16px; }
+    #portfolio .portfolio__items #in-progress {
+      width: 45%;
+      margin: 10px;
+      padding: 10px; }
   #contact .contact__left-section {
     width: 40%; }
   #contact .contact__right-section {
@@ -655,4 +649,18 @@ footer {
         color: #fff; }
       #main-nav .container .navbar-collapse .navbar-right {
         display: flex;
-        justify-content: center; } }
+        justify-content: center; }
+  #portfolio .portfolio__items .portfolio__item:after,
+  #portfolio .portfolio__items .portfolio__item:before {
+    width: 100%; }
+  #portfolio .portfolio__items .portfolio__item-info {
+    opacity: 1;
+    padding: 10px; } }
+
+@media all and (max-width: 1024px) {
+  #portfolio .portfolio__items .portfolio__item:after,
+  #portfolio .portfolio__items .portfolio__item:before {
+    width: 100%; }
+  #portfolio .portfolio__items .portfolio__item-info {
+    opacity: 1;
+    padding: 10px; } }

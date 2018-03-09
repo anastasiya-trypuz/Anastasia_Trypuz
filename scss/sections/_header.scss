@@ -9,19 +9,24 @@ header {
     background: linear-gradient(rgba(33, 32, 36, 0.1), rgba(33, 32, 36, 0.1)), url('../img/header/header-bg.jpeg');
     background-attachment: fixed;
     height: 100vh;
+    max-width: 100%;
     background-position: center;
     background-size: cover;
-    padding: 0;
-    margin: 0;
     position: relative;
     @include box--shadow;
     z-index: map-get($z-index, header);
 
     
     #header__title {
-        @include centering;
+        position: absolute;
+        left: 0;
+        right: 0;
         text-align: center;
         letter-spacing: 2px;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        
         
         h1 {
             font-size: 50px;
@@ -32,7 +37,7 @@ header {
         }
         
         .title--intro {
-            animation-name: cd-bounce-right;
+//            animation-name: cd-bounce-right;
             animation-duration: 1.5s;
             text-transform: uppercase;
             text-shadow: 0.5px 0.5px 14px #212024;

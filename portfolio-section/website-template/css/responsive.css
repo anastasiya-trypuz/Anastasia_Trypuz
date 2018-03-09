@@ -1,4 +1,4 @@
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
     #main-nav,
     #main-nav.scrolled {
         background-color: #1F0304;
@@ -19,6 +19,15 @@
 
     #services .row > div {
         margin-bottom: 40px;
+    }
+    
+    #portfolio .single-portfolio-item .portfolio-image .hovered {
+        opacity: 1;
+    }
+    
+    #portfolio #portfolio-image-2, 
+    #portfolio #portfolio-image-4 {
+        background-position: center;
     }
     
     #team .row > div {

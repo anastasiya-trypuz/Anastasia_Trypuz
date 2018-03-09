@@ -51,6 +51,7 @@ Section "Contact"
             
             .contact__text {
                 margin: 0;
+                text-decoration: none;
             }
             
             .contact__mail {
@@ -144,14 +145,6 @@ Section "Contact"
                 color:$light-color;
                 font-size: 13px;
                 letter-spacing: 1px;
-            }
-            
-            .error_message {
-                font-size: 10px;
-                color: #ff6961;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
     }
