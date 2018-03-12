@@ -234,12 +234,12 @@ ul.todo#completed:before {
 }
 
 ul.todo#todo:empty:after {
-    content: 'You have nothing to-do!';
+    content: 'You have nothing to do!';
     margin: 15px 0 0 0;
 }
 
 ul.todo#completed:empty:after {
-    content: 'You have yet complete any tasks';
+    content: 'You have not yet completed any tasks';
 }
 
 ul.todo#todo:after,

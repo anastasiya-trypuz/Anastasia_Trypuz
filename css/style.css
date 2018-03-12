@@ -35,7 +35,8 @@ Back to top button
   border: 2px solid #a0724e;
   border-radius: 50%;
   opacity: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  z-index: 20; }
 
 #btn__back-top.visible {
   opacity: 1; }
@@ -465,6 +466,9 @@ Section "Contact"
     #contact .contact__info .contact__text {
       margin: 0;
       text-decoration: none; }
+    #contact .contact__info a[href^="tel"] {
+      color: inherit;
+      text-decoration: none; }
     #contact .contact__info .contact__mail {
       color: #010d23; }
   #contact .contact__icons {
@@ -590,5 +594,10 @@ footer {
   #portfolio .portfolio__items .portfolio__item-info {
     opacity: 1;
     padding: 10px; }
+  #contact .contact__info {
+    font-weight: bold; }
+    #contact .contact__info .contact__icon {
+      color: #010d23;
+      border-color: #010d23; }
   #contact .contact__icons a {
     color: #fff; } }

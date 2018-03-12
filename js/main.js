@@ -7,6 +7,7 @@ $(document).ready(function() {
     smoothScroll();
 //    addLink();
     formValidation();
+    navCollapse();
 });
 
 $(window).scroll(function() {
@@ -17,8 +18,9 @@ $(window).scroll(function() {
 function smoothScroll() {
     
     $('a[href^="#"]:not([href="#"])').click(function(){ 
+        
 		$('html, body').animate( { 
-            scrollTop: $(this.hash).offset().top
+            scrollTop: $(this.hash).position().top
         }, 800 );
 	});
 }
@@ -90,6 +92,12 @@ function formValidation() {
             return false;
         }
         return true;
+    });
+}
+
+function navCollapse() {
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
     });
 }
 

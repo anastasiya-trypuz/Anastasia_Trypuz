@@ -90,7 +90,7 @@ $(document).ready(function() {
         
         $('#stop').click (function() {
             clearInterval(counter);
-            $('#timer-title').html('Stoped');
+            $('#timer-title').html('Stopped');
         });
         
         $('#reset').click(function() {

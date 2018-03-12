@@ -4,6 +4,7 @@
 $(document).ready(function() {
     scrollMenu();
     smoothScroll();
+    navCollapse();
 
 });
 
@@ -33,5 +34,11 @@ function scrollMenu() {
     } else {
         $('#main-nav').removeClass('scrolled');
     }
+}
+
+function navCollapse() {
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 }
 

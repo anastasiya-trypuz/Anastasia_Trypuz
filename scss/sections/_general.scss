@@ -44,6 +44,7 @@ Back to top button
     border-radius: 50%;
     opacity: 0;
     text-decoration: none;
+    z-index: map-get($z-index, btn-back-top);
 }
 
 #btn__back-top.visible {

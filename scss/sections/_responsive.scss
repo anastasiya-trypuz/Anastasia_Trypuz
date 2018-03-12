@@ -145,7 +145,7 @@ $big: 1024px;
     }
 }
 
-// Responsive navigation menu for less than 767px 
+// Less than 767px 
 @media all and (max-width: $medium) {
     #main-nav {
         position: relative;
@@ -219,6 +219,14 @@ $big: 1024px;
     }
     
     #contact { 
+        .contact__info {
+            font-weight: bold;
+            
+            .contact__icon {
+                color: $main-color;
+                border-color: $main-color;
+            }
+        }
         .contact__icons {
             a {
                 color: #fff;
