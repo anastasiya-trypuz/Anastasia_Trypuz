@@ -29,17 +29,17 @@ body {
     font-size: 40px;
 }
 
-#timeSet-section {
+#time__section {
     display: flex;
     justify-content: center;
     font-family: 'Playfair Display', serif;
 }
 
-.timeSet-block {
+.time__block {
     margin: 0 30px;
 }
 
-.timeSet {
+.time {
     margin: 20px 0;
     display: flex;
     justify-content: center;
@@ -78,11 +78,6 @@ body {
 
 #start {
     background: #a0e7a0;
-    color: #fff;
-}
-
-#stop {
-    background: #FF8F83;
     color: #fff;
 }
 
