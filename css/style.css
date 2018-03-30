@@ -108,7 +108,8 @@ header {
   background-size: cover;
   position: relative;
   box-shadow: 1px 1px 3px #838383;
-  z-index: 9; }
+  z-index: 9;
+  overflow: hidden; }
   header #header__title {
     position: absolute;
     left: 0;
@@ -123,11 +124,47 @@ header {
     header #header__title h3 {
       font-size: 18px; }
     header #header__title .title--intro {
-      animation-duration: 1.5s;
+      -webkit-animation: bounce-right 1.5s;
+      -moz-animation: bounce-right 1.5s;
+      -o-animation: bounce-right 1.5s;
+      animation: bounce-right 1.5s;
       text-transform: uppercase;
       text-shadow: 0.5px 0.5px 14px #212024; }
 
-@keyframes cd-bounce-right {
+@-webkit-keyframes bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px); }
+  60% {
+    opacity: .7;
+    transform: translateX(15px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-moz-keyframes bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px); }
+  60% {
+    opacity: .7;
+    transform: translateX(15px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-o-keyframes bounce-right {
+  0% {
+    opacity: .2;
+    transform: translateX(-200px); }
+  60% {
+    opacity: .7;
+    transform: translateX(15px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes bounce-right {
   0% {
     opacity: .2;
     transform: translateX(-200px); }
@@ -156,7 +193,40 @@ header {
         background: rgba(1, 13, 35, 0.8);
         border-color: #010d23; }
     header #header__title .btn--intro {
+      -webkit-animation: btn-opacity 1.5s;
+      -moz-animation: btn-opacity 1.5s;
+      -o-animation: btn-opacity 1.5s;
       animation: btn-opacity 1.5s; }
+
+@-webkit-keyframes btn-opacity {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: .5; }
+  80% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes btn-opacity {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: .5; }
+  80% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes btn-opacity {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: .5; }
+  80% {
+    opacity: .7; }
+  100% {
+    opacity: 1; } }
 
 @keyframes btn-opacity {
   0% {
@@ -183,7 +253,28 @@ header {
       cursor: pointer;
       transform: scale(1.1); }
     header #arrow__down .arrow--animation {
+      -webkit-animation: arrow-up 1.5s;
+      -moz-animation: arrow-up 1.5s;
+      -o-animation: arrow-up 1.5s;
       animation: arrow-up 1.5s; }
+
+@-webkit-keyframes arrow-up {
+  0% {
+    transform: translateY(100px); }
+  100% {
+    transform: translateY(0); } }
+
+@-moz-keyframes arrow-up {
+  0% {
+    transform: translateY(100px); }
+  100% {
+    transform: translateY(0); } }
+
+@-o-keyframes arrow-up {
+  0% {
+    transform: translateY(100px); }
+  100% {
+    transform: translateY(0); } }
 
 @keyframes arrow-up {
   0% {
