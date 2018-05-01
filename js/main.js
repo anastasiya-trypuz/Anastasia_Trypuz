@@ -1,20 +1,32 @@
 'use strict';
 
 $(document).ready(function() {
-    scrollMenu();
-    goTopButton();
-    goTopFunction();
+    stickyNav();
     smoothScroll();
-//    addLink();
-    formValidation();
-    navCollapse();
+    collapseMenu();
+    displayGoToTopBtn()
+    goToTopBtn();
 });
 
 $(window).scroll(function() {
-    scrollMenu();
-    goTopButton();
+    stickyNav();
+    displayGoToTopBtn();
 });
 
+//Stick nav on top while scrolling 
+function stickyNav() {
+
+    var navTop = $('#main-nav').position().top;
+    var scrolled = $(window).scrollTop();
+    
+    if(scrolled > navTop) {
+        $('#main-nav').addClass('scrolled');
+    } else {
+        $('#main-nav').removeClass('scrolled');
+    }
+}
+
+//Effect of smooth scroll for nav links
 function smoothScroll() {
     
     $('a[href^="#"]:not([href="#"])').click(function(){ 
@@ -25,19 +37,24 @@ function smoothScroll() {
 	});
 }
 
-function scrollMenu() {
+// Collapse menu on small devices 
+function collapseMenu() {
+    $('#toggle').click(function(e) {
+        e.preventDefault();
+        $('.bar').toggleClass('active');
+        $('.nav').slideToggle(400);
+    });
     
-    var menuHeight = $('#main-nav').height();
-    var scrolled = $(window).scrollTop();
-    
-    if(scrolled >= menuHeight) {
-        $('#main-nav').addClass('scrolled');
-    } else {
-        $('#main-nav').removeClass('scrolled');
-    }
+    $(window).resize(function () {
+        var w = $(this).width();
+        if (w > 992 && $('.nav').is(':hidden')) {
+            $('.nav').removeAttr('style');
+        }
+    });
 }
 
-function goTopButton() {
+// Show go-to-top button on scroll 
+function displayGoToTopBtn() {
     
     var menuHeight = $('#main-nav').height();
     var scrolled = $(window).scrollTop();
@@ -49,10 +66,10 @@ function goTopButton() {
     }
 }
 
-function goTopFunction() {
-    
-    $('#btn__back-top').click(function(event) {
-        event.preventDefault();
+// Function go-to-top 
+function goToTopBtn() {
+    $('#btn__back-top').click(function(e) {
+        e.preventDefault();
         
         $('html, body').animate({
             scrollTop: 0 },
@@ -60,47 +77,6 @@ function goTopFunction() {
         );
     });
 }
-
-//function addLink() {
-//    $('.portfolio__item').click(function() {
-//        if ($(this).attr('id') == "pomodoro-app") {
-//            window.open('portfolio-section/pomodoro-app/index.html', '_blank'); 
-//        }
-//        else if ($(this).attr('id') == "site-template") {
-//            window.open('portfolio-section/website-template/index.html', '_blank');   
-//        }
-//        else if ($(this).attr('id') == "todo-app") {
-//            window.open('portfolio-section/todo-app/index.html', '_blank');   
-//        } 
-//    });
-//}
-
-function formValidation() {
-    
-    $('form').submit(function(e) {
-    
-        var userName = $("#userName").val();
-        var userEmail = $("#userEmail").val();
-
-        if(!userName){
-            e.preventDefault();  
-            return false;
-        } 
-
-        if(!userEmail) {
-            e.preventDefault();
-            return false;
-        }
-        return true;
-    });
-}
-
-function navCollapse() {
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
-}
-
 
 
 

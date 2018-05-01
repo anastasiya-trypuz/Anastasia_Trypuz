@@ -48,49 +48,81 @@ Navigation
 */
 #main-nav {
   background-color: transparent;
-  height: 30px;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
-  text-align: center;
   width: 100%;
-  z-index: 10; }
-  #main-nav .container ul li a {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 100;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.5s linear;
-    font-weight: bold; }
-    #main-nav .container ul li a:hover {
-      transform: scale(1.1); }
-  #main-nav .container ul li .nav__icon {
-    font-size: 20px;
-    transition: all 0.3s linear; }
-    #main-nav .container ul li .nav__icon:hover {
-      transform: scale(1.3); }
-  #main-nav .container ul li a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.5s ease-in-out;
-    width: 0;
-    height: 2px;
-    border-bottom: 1px solid #010d23;
-    margin-bottom: 5px; }
-  #main-nav .container ul li a:not(.nav__icon):hover::before {
-    width: 100%; }
+  min-height: 50px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; }
+  #main-nav #toggle {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: 17px 20px 0 0; }
+    #main-nav #toggle .bar {
+      border-top: 3px solid #fff;
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      transition: all 0.3s ease-in-out; }
+    #main-nav #toggle .bar-top {
+      top: 0; }
+    #main-nav #toggle .bar-middle {
+      top: 7px; }
+    #main-nav #toggle .bar-bottom {
+      top: 14px; }
+    #main-nav #toggle .bar-top.active {
+      transform: rotate(45deg) translate(5px, 5px); }
+    #main-nav #toggle .bar-middle.active {
+      opacity: 0; }
+    #main-nav #toggle .bar-bottom.active {
+      transform: rotate(-45deg) translate(5px, -5px); }
+  #main-nav ul.nav-left {
+    margin: 20px 0 0 40px; }
+  #main-nav ul.nav-right {
+    margin: 20px 40px 0 0; }
+  #main-nav ul li {
+    display: inline-block;
+    margin-left: 20px; }
+    #main-nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s linear;
+      display: block;
+      font-weight: 600; }
+      #main-nav ul li a:hover {
+        transform: scale(1.1); }
+    #main-nav ul li .nav__icon {
+      font-size: 20px;
+      transition: all 0.3s linear; }
+      #main-nav ul li .nav__icon:hover {
+        transform: scale(1.3); }
+    #main-nav ul li a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+      width: 0;
+      height: 2px;
+      border-bottom: 1px solid #010d23;
+      margin-bottom: -5px; }
+    #main-nav ul li a:not(.nav__icon):hover::before {
+      width: 100%; }
 
 #main-nav.scrolled {
-  height: 20px;
-  transition: all 0.5s linear;
-  background: #313d46; }
+  transition: all 0.3s linear;
+  background: #768185;
+  position: fixed;
+  box-shadow: 0px 0px 10px 1px #313d46; }
   #main-nav.scrolled ul li a::before {
     content: none; }
 
@@ -120,7 +152,7 @@ header {
     top: 50%;
     transform: translateY(-50%); }
     header #header__title h1 {
-      font-size: 50px; }
+      font-size: 45px; }
     header #header__title h3 {
       font-size: 18px; }
     header #header__title .title--intro {
@@ -329,6 +361,10 @@ Section "About me"
         margin: 0 auto; }
         #about-me #about-me__description #about-me__text .btn__cv:hover {
           background: #010d23; }
+    #about-me #about-me__description #about-me__text > p {
+      line-height: 1.4;
+      margin: 5px 0;
+      font-size: 15px; }
     #about-me #about-me__description #about-me__photo {
       width: 50%; }
       #about-me #about-me__description #about-me__photo #profile__photo {
@@ -488,7 +524,6 @@ Section "Portfolio"
       justify-content: center;
       align-items: center;
       height: 100%;
-      width: 100%;
       opacity: 0;
       transition: all 0.4s linear 0.2s; }
       #portfolio .portfolio__items .portfolio__item-info:hover {
@@ -561,7 +596,8 @@ Section "Contact"
       color: inherit;
       text-decoration: none; }
     #contact .contact__info .contact__mail {
-      color: #010d23; }
+      color: #010d23;
+      text-decoration: none; }
   #contact .contact__icons {
     margin: 20px 0 10px 0; }
     #contact .contact__icons a {
@@ -582,95 +618,61 @@ Footer
 */
 footer {
   background-color: #313d46;
-  text-align: center;
-  padding: 10px;
-  font-size: 13px; }
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  footer div a {
+    text-decoration: none;
+    color: #a0724e;
+    text-transform: uppercase;
+    font-weight: 600; }
 
-@media screen and (max-width: 350px) {
-  header #header__title h1 {
-    font-size: 30px; }
+@media all and (max-width: 992px) {
+  #main-nav {
+    flex-direction: column;
+    min-height: 50px;
+    background: rgba(118, 129, 133, 0.7);
+    position: relative;
+    box-shadow: 0px 0px 10px 1px #8d999e; }
+    #main-nav #toggle {
+      display: block;
+      align-self: flex-end; }
+    #main-nav ul.nav-left, #main-nav ul.nav-right {
+      margin: 0; }
+    #main-nav ul {
+      margin: 5px 0;
+      display: none; }
+      #main-nav ul li {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin: 8px 0; }
+        #main-nav ul li a {
+          display: block; }
+        #main-nav ul li a::before {
+          content: none; }
   #about-me #about-me__description #about-me__text {
     width: 100%;
-    order: 2;
-    text-align: center; }
+    order: 2; }
     #about-me #about-me__description #about-me__text .btn__cv {
       margin-top: 10px; }
   #about-me #about-me__description #about-me__photo {
     width: 100%;
     order: 1;
     margin-bottom: 50px; }
-    #about-me #about-me__description #about-me__photo #profile__photo {
-      width: 100%; }
-  #skills .skills__items .skills__item {
-    width: 100%; }
   #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
     width: 100%;
     margin: 20px auto;
-    height: 100%;
-    padding: 15px; }
-  #btn__back-top {
-    right: 7px; } }
+    text-align: center; }
+  #contact .contact__info {
+    font-weight: 500; }
+  #contact .contact__icons a {
+    color: #cbcbcb; } }
 
-@media all and (min-width: 350px) and (max-width: 767px) {
-  #about-me #about-me__description #about-me__text {
-    width: 100%;
-    order: 2; }
-  #about-me #about-me__description #about-me__photo {
-    width: 100%;
-    order: 1;
-    margin-bottom: 50px; }
-  #skills .skills__items {
-    width: 80%; }
-    #skills .skills__items .skills__item {
-      width: 30%; }
-  #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
-    width: 100%;
-    margin: 20px auto; } }
-
-@media all and (min-width: 767px) and (max-width: 1024px) {
-  #about-me #about-me__description #about-me__text {
-    width: 100%;
-    order: 2; }
-    #about-me #about-me__description #about-me__text .btn__cv {
-      width: 30%; }
-  #about-me #about-me__description #about-me__photo {
-    width: 100%;
-    order: 1;
-    margin-bottom: 50px; }
-  #portfolio .portfolio__items {
-    width: 80%; }
-    #portfolio .portfolio__items .portfolio__item {
-      width: 45%;
-      margin: 10px;
-      padding: 10px; }
-      #portfolio .portfolio__items .portfolio__item .portfolio__item-info .portfolio__item-title {
-        font-size: 16px; }
-    #portfolio .portfolio__items #in-progress {
-      width: 45%;
-      margin: 10px;
-      padding: 10px; } }
-
-@media all and (max-width: 767px) {
-  #main-nav {
-    position: relative;
-    background: #B6B7B9;
-    height: 100%; }
-    #main-nav .container button {
-      border: none; }
-      #main-nav .container button .icon-bar {
-        background: #fff; }
-    #main-nav .container .navbar-collapse {
-      border: none;
-      clear: both;
-      background: transparent;
-      overflow: hidden; }
-      #main-nav .container .navbar-collapse ul li a::before {
-        display: none; }
-      #main-nav .container .navbar-collapse ul li .nav__icon:hover {
-        color: #fff; }
-      #main-nav .container .navbar-collapse .navbar-right {
-        display: flex;
-        justify-content: center; }
+@media all and (max-width: 768px) {
   #portfolio .portfolio__items .portfolio__item:after,
   #portfolio .portfolio__items .portfolio__item:before {
     width: 100%; }
@@ -678,17 +680,35 @@ footer {
     opacity: 1;
     padding: 10px; } }
 
-@media all and (max-width: 1024px) {
-  #portfolio .portfolio__items .portfolio__item:after,
-  #portfolio .portfolio__items .portfolio__item:before {
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  #portfolio .portfolio__items {
+    width: 90%; }
+    #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
+      width: 43%;
+      padding: 10px;
+      font-size: 14px; } }
+
+@media all and (min-width: 480px) and (max-width: 992px) {
+  #skills .skills__items {
+    width: 80%; }
+    #skills .skills__items .skills__item {
+      width: 30%; }
+  #portfolio .portfolio__items {
+    width: 70%; }
+    #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
+      font-size: 14px; } }
+
+@media all and (max-width: 480px) {
+  header #header__title h1 {
+    font-size: 30px; }
+  header #header__title h3 {
+    font-size: 16px; }
+  #skills .skills__items .skills__item {
     width: 100%; }
-  #portfolio .portfolio__items .portfolio__item-info {
-    opacity: 1;
-    padding: 10px; }
-  #contact .contact__info {
-    font-weight: bold; }
-    #contact .contact__info .contact__icon {
-      color: #010d23;
-      border-color: #010d23; }
-  #contact .contact__icons a {
-    color: #fff; } }
+  #portfolio .portfolio__items {
+    width: 90%; }
+    #portfolio .portfolio__items .portfolio__item, #portfolio .portfolio__items #in-progress {
+      padding: 10px;
+      font-size: 12px; }
+  #btn__back-top {
+    right: 7px; } }

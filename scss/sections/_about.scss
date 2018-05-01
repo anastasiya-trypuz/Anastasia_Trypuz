@@ -44,6 +44,12 @@ Section "About me"
             } 
         }
         
+        #about-me__text > p {
+            line-height: 1.4;
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        
         #about-me__photo {
             width: 50%;
             

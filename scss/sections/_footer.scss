@@ -8,7 +8,19 @@ Footer
 
 footer {
     background-color: #313d46;
-    text-align: center;
-    padding: 10px;
-    font-size: 13px;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        a {
+            text-decoration: none;
+            color: $gold-color;  
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
 }
